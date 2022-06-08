@@ -2,15 +2,15 @@ version: "3"
 services:
   tflCamApp:
     container_name: tflcamapp
-    image: tflcamsapp:latest
+    image: f4zphp27xi2s27yn/my_repo_topor:tflcamapp
     ports:
-     - 4000:80
+      - 4000:80
   tflCamAppApi:
     container_name: tflcamappapi
+    image: f4zphp27xi2s27yn/my_repo_topor:tflcamsmapsapi
     environment:
       - MONGOOSE_CONNECTION_STRING
       - MONGOOSE_USER
       - MONGOOSE_PASS
     ports:
-     - 127.0.0.1:3200:3200
-    image: tfl_cams_maps_api:latest
+      - 127.0.0.1:3200:3200
