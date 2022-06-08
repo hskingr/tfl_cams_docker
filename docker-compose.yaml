@@ -5,6 +5,7 @@ services:
     image: f4zphp27xi2s27yn/my_repo_topor:tflcamapp
     ports:
       - 4000:80
+
   tflCamAppApi:
     container_name: tflcamappapi
     image: f4zphp27xi2s27yn/my_repo_topor:tflcamsmapsapi
@@ -16,5 +17,4 @@ services:
       - 3200:3200
 networks:
   default:
-    external: true
     name: myNetwork
