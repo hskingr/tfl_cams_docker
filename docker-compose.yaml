@@ -1,0 +1,16 @@
+version: "3"
+services:
+  tflCamApp:
+    container_name: tflcamapp
+    image: tflcamsapp:latest
+    ports:
+     - 4000:80
+  tflCamAppApi:
+    container_name: tflcamappapi
+    environment:
+      - MONGOOSE_CONNECTION_STRING
+      - MONGOOSE_USER
+      - MONGOOSE_PASS
+    ports:
+     - 127.0.0.1:3200:3200
+    image: tfl_cams_maps_api:latest
