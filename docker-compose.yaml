@@ -13,4 +13,7 @@ services:
       - MONGOOSE_USER
       - MONGOOSE_PASS
     ports:
-      - 127.0.0.1:3200:3200
+      - 3200:3200
+networks:
+  default:
+    name: tflCamApiNetwork
